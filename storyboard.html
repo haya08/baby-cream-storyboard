@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Storyboard – Baby Charisma Cream Ad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --pink-deep: #c2547a;
+        --pink-mid: #e98cab;
+        --pink-light: #fadadd;
+        --pink-pale: #fff0f4;
+        --gold: #d4a843;
+        --gold-light: #fdf3dc;
+        --white: #ffffff;
+        --ink: #2a1520;
+        --muted: #7a5564;
+        --border: #f0c8d4;
+        --scene-w: 260px;
+        --scene-r: 16px;
+
+        --font-ar: "Cairo", sans-serif;
+        --font-en: "Inter", sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-ar);
+        background: #fff5f8;
+        color: var(--ink);
+        min-height: 100vh;
+        padding: 0 0 60px;
+      }
+
+      /* ── HEADER ────────────────────────────────────────────── */
+      header {
+        background: linear-gradient(135deg, var(--pink-deep) 0%, #a0336a 100%);
+        padding: 36px 48px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .header-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .header-brand .label {
+        font-family: var(--font-en);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.55);
+        font-weight: 500;
+      }
+
+      .header-brand h1 {
+        font-size: 28px;
+        font-weight: 900;
+        color: var(--white);
+        line-height: 1.1;
+      }
+
+      .header-meta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        background: rgba(255, 255, 255, 0.15);
+        color: var(--white);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        font-family: var(--font-en);
+      }
+
+      .badge-gold {
+        background: var(--gold);
+        color: var(--white);
+        border-color: transparent;
+      }
+
+      /* ── TRACK BAR ─────────────────────────────────────────── */
+      .track-wrap {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 20px 48px;
+        display: flex;
+        align-items: center;
+        gap: 0;
+        overflow-x: auto;
+      }
+
+      .track-step {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex: 1;
+        min-width: 0;
+      }
+
+      .track-dot {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--pink-deep);
+        color: var(--white);
+        font-weight: 700;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-family: var(--font-en);
+        box-shadow: 0 2px 8px rgba(194, 84, 122, 0.35);
+      }
+
+      .track-line {
+        flex: 1;
+        height: 2px;
+        background: linear-gradient(90deg, var(--pink-mid), var(--pink-light));
+        min-width: 20px;
+      }
+
+      .track-step:last-child .track-line {
+        display: none;
+      }
+
+      /* ── MAIN GRID ─────────────────────────────────────────── */
+      .scenes-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        padding: 48px 48px 0;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      /* ── SCENE CARD ────────────────────────────────────────── */
+      .scene-card {
+        display: grid;
+        grid-template-columns: var(--scene-w) 1fr;
+        gap: 36px;
+        background: var(--white);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow:
+          0 4px 24px rgba(194, 84, 122, 0.08),
+          0 1px 4px rgba(0, 0, 0, 0.04);
+        border: 1px solid var(--border);
+        position: relative;
+      }
+
+      .scene-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--pink-deep), var(--pink-mid));
+        border-radius: 0 20px 20px 0;
+      }
+
+      /* IMAGE COLUMN */
+      .scene-img-col {
+        position: relative;
+        background: var(--pink-pale);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .scene-number-badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 34px;
+        height: 34px;
+        background: var(--pink-deep);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 14px;
+        font-family: var(--font-en);
+        z-index: 2;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .scene-img-col img {
+        width: 100%;
+        aspect-ratio: 9/16;
+        object-fit: cover;
+        display: block;
+      }
+
+      .time-bar {
+        background: var(--ink);
+        color: var(--white);
+        font-family: var(--font-en);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-align: center;
+        padding: 7px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .time-bar .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--pink-mid);
+        flex-shrink: 0;
+      }
+
+      /* INFO COLUMN */
+      .scene-info-col {
+        padding: 28px 32px 28px 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .scene-title {
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--pink-deep);
+        line-height: 1.3;
+      }
+
+      .scene-goal {
+        font-size: 14px;
+        color: var(--muted);
+        background: var(--pink-pale);
+        border-right: 3px solid var(--pink-mid);
+        padding: 10px 14px;
+        border-radius: 0 8px 8px 0;
+        line-height: 1.7;
+      }
+
+      .info-section-label {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-family: var(--font-en);
+        margin-bottom: 8px;
+      }
+
+      .info-section {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .detail-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .detail-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 13.5px;
+        line-height: 1.6;
+        color: #3e2330;
+      }
+
+      .detail-list li::before {
+        content: "◆";
+        color: var(--pink-mid);
+        font-size: 8px;
+        margin-top: 5px;
+        flex-shrink: 0;
+      }
+
+      /* FEEL + CAM + TRANSITION chips */
+      .chips-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        font-size: 12px;
+        font-weight: 600;
+        border: 1.5px solid transparent;
+      }
+
+      .chip-feel {
+        background: #fff0f6;
+        border-color: var(--pink-mid);
+        color: var(--pink-deep);
+      }
+      .chip-cam {
+        background: var(--gold-light);
+        border-color: var(--gold);
+        color: #7a5200;
+      }
+      .chip-trans {
+        background: #f0f4ff;
+        border-color: #9bb0e8;
+        color: #334499;
+      }
+
+      .divider {
+        height: 1px;
+        background: var(--border);
+        border: none;
+        margin: 2px 0;
+      }
+
+      /* ── AI PROMPT BOX ─────────────────────────────────────── */
+      .prompt-box {
+        background: #1c1020;
+        border-radius: 12px;
+        padding: 16px 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .prompt-box .prompt-label {
+        font-family: var(--font-en);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 600;
+      }
+
+      .prompt-box .prompt-text {
+        font-family: var(--font-en);
+        font-size: 12px;
+        line-height: 1.7;
+        color: #e8d8eb;
+        direction: ltr;
+        text-align: left;
+      }
+
+      .copy-btn {
+        align-self: flex-start;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 6px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 11px;
+        font-family: var(--font-en);
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .copy-btn:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      /* ── FOOTER ────────────────────────────────────────────── */
+      footer {
+        max-width: 1400px;
+        margin: 48px auto 0;
+        padding: 0 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid var(--border);
+        padding-top: 24px;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      footer p {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .legend {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+
+      .legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+      }
+
+      @media (max-width: 768px) {
+        .scenes-wrap,
+        .track-wrap,
+        header,
+        footer {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .scene-card {
+          grid-template-columns: 1fr;
+        }
+        .scene-card::before {
+          width: 100%;
+          height: 4px;
+          top: 0;
+          right: 0;
+          border-radius: 20px 20px 0 0;
+        }
+        .scene-img-col img {
+          aspect-ratio: 4/3;
+        }
+        .scene-info-col {
+          padding: 20px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-brand">
+        <span class="label">Video Ad Storyboard</span>
+        <h1>Baby-Charisma Cream</h1>
+      </div>
+      <div>
+        <img style="width: 100px;" src="./images/taken images/logo.png" alt="">
+      </div>
+      <div class="header-meta">
+        <span class="badge">📐 9:16 Reels</span>
+        <span class="badge badge-gold">✦ 9 Scenes</span>
+      </div>
+    </header>
+
+    <!-- timeline track -->
+    <div class="track-wrap">
+      <div class="track-step">
+        <div class="track-dot">1</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">2</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">3</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">4</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">5</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">6</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">7</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">8</div>
+        <div class="track-line"></div>
+      </div>
+      <div class="track-step">
+        <div class="track-dot">9</div>
+        <div class="track-line"></div>
+      </div>
+    </div>
+
+    
+    
+    <div class="scenes-wrap">
+      <!-- overview -->
+      <div class="scene-card " style="display: flex;">
+        <!-- <div class="scene-img-col">
+          <div class="scene-number-badge">1</div>
+          <img
+            src="images/taken images/1.png"
+            alt="Scene 1 – Luxury Product Intro"
+          />
+        </div> -->
+        <div class="scene-info-col">
+          <div class="scene-title">Overview</div>
+
+          <!-- <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                اضاءة تتحرك من اليسار الي اليمين 
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>Charisma baby cream</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-feel">🤍 هادئ</span>
+              <span class="chip chip-feel">💎 فاخر</span>
+              <span class="chip chip-cam">🎥 Push In – تقدم بطيء</span>
+            </div>
+          </div> -->
+        
+          <div class="info-section">
+            <ul class="detail-list">
+              <li>
+                 الإعلان مبني على عرض المنتج بشكل بصري جذّاب من زوايا وخلفيات مختلفة (وردي، أبيض، أزرق، سماء) بدل ما يبدأ بمشكلة الطفح الجلدي — التركيز كله على جمال وفخامة المنتج وقوامه، مع لحظة عاطفية بسيطة في النص قبل الإغلاق بالـ CTA. 
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 1 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">1</div>
+          <img
+            src="images/taken images/1.png"
+            alt="Scene 1 – Luxury Product Intro"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">المشهد الأول – ظهور المنتج</div>
+          <!-- <div class="scene-goal">🎯 <strong>الهدف:</strong> تقديم المنتج بشكل فاخر وجذاب يشدّ الانتباه من الثانية الأولى.</div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                اضاءة تتحرك من اليسار الي اليمين 
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>Charisma baby cream</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-feel">🤍 هادئ</span>
+              <span class="chip chip-feel">💎 فاخر</span>
+              <span class="chip chip-cam">🎥 Push In – تقدم بطيء</span>
+              <!-- <span class="chip chip-trans">⚡ وميض ضوئي ناعم</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 2 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">2</div>
+          <img
+            src="images/taken images/2.png"
+            alt="Scene 2 – Protection Shield"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">المشهد الثاني – قوام الكريم, تأثير بصري</div>
+          <!-- <div class="scene-goal">🎯 <strong>الهدف:</strong> إبراز الحماية القوية التي يوفرها الكريم لبشرة الطفل.</div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                الأنبوب مائل بزاوية، محاط بكريم أبيض منتشر وقطرات ماء. حركة
+                مائلة للأنبوب مع splash للكريم حوله.
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>ناعم زي الحرير على جلد طفلك</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-feel">✨ ناعم</span>
+              <!-- <span class="chip chip-feel">🔒 أمان</span>
+              <span class="chip chip-feel">💫 ثقة</span>
+              <span class="chip chip-cam">🎥 دوران بطيء حول العبوة</span> -->
+              <!-- <span class="chip chip-trans">⚡ جزيئات مضيئة تكشف المشهد</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 3 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">3</div>
+          <img src="images/taken images/3.png" alt="Scene 3 – Natural Oils" />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">
+            المشهد الثالث – الكريم يخرج, قوة المكونات
+          </div>
+          <!-- <div class="scene-goal">🎯 <strong>الهدف:</strong> إظهار الزيوت الطبيعية المغذية (زيت الخروع، زيت الزيتون، زيت الجوجوبا).</div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                الأنبوب منتصب بزاوية مع الغطاء مفتوح، كريم أبيض يسيل ببطء مع
+                تأثير water splash في الخلفية. إضاءة نجمية.
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>Zinc Oxide 15% + 3 زيوت طبيعية</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-feel">🌿 تغذية</span>
+              <span class="chip chip-feel">✨ نعومة</span>
+              <span class="chip chip-feel">🍃 عناية طبيعية</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 4 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">4</div>
+          <img
+            src="images/taken images/4.png"
+            alt="Scene 4 – Soothing Ingredients"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">المشهد الرابع – لمسة الفاخر</div>
+          <!-- <div class="scene-goal">🎯 <strong>الهدف:</strong> إبراز مكونات التهدئة — الألوفيرا والبابونج — وإحساس الترطيب العميق.</div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                الأنبوب محاط بكرات كريستال شفافة وهالة قوس قزح خلفه. يدور ببطء
+                360°. يُحسّ بالفخامة والنقاء.
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>تركيبة آمنة 100% للبشرة الحساسة</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-feel">🔒 حماية</span>
+              <span class="chip chip-feel">💧 تهدئة</span>
+              <span class="chip chip-feel">❄️ ترطيب</span>
+              <span class="chip chip-cam">🎥 ارتفاع بطيء للأعلى</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 5 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">5</div>
+          <img
+            src="images/taken images/5.png"
+            alt="Scene 5 – Final Hero Shot"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">المشهد الخامس – عرض واضح</div>
+          <!-- <div class="scene-goal">
+            🎯 <strong>الهدف:</strong> لقطة ختامية فاخرة تجمع كل عناصر الإعلان
+            في صورة واحدة موحدة.
+          </div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                الأنبوب أمامي مباشر مع ظلال مائلة جميلة. زووم تدريجي على النص
+                الموجود على الأنبوب "Skin-soothing cream for diaper rash".
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>مخصوص لطفح الحفاضة</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-feel">🏆 احترافي</span>
+              <span class="chip chip-feel">✅ آمن</span>
+              <span class="chip chip-feel">💫 موثوق</span>
+              <span class="chip chip-cam">🎥 تقريب بطيء جداً للعبوة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 6 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">6</div>
+          <img
+            src="images/taken images/6.png"
+            alt="Scene 6 – Final Hero Shot"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">المشهد السادس – قطرات الكريم</div>
+          <!-- <div class="scene-goal">
+            🎯 <strong>الهدف:</strong> لقطة ختامية فاخرة تجمع كل عناصر الإعلان
+            في صورة واحدة موحدة.
+          </div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                الأنبوب مفتوح بزاوية والكريم يسيل في قطرات متتالية واضحة ببطء
+                شديد. أجمل مشهد لقوام الكريم.
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>سريع الامتصاص</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-trans">تدفق بطيئ لقطرات الكريم </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 7 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">7</div>
+          <img
+            src="images/taken images/7.png"
+            alt="Scene 7 – Final Hero Shot"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">
+            المشهد السابع – موجة الكريم — نعومة البشرة
+          </div>
+          <!-- <div class="scene-goal">
+            🎯 <strong>الهدف:</strong> لقطة ختامية فاخرة تجمع كل عناصر الإعلان
+            في صورة واحدة موحدة.
+          </div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                الأنبوب في الخلف وأمامه موجة كريم أبيض تشبه الحليب تتحرك حركة دائرية. يحسّ بالنقاء
+                والنعومة..
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>بشرة طفلك تستاهل أكتر</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-trans">blur علي العلبة</span>
+              <span class="chip chip-trans">حركة دائرية للكريم</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 8 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">8</div>
+          <img
+            src="images/taken images/8.png"
+            alt="Scene 8 – Final Hero Shot"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">المشهد الثامن – المنتج في حياة الطفل</div>
+          <!-- <div class="scene-goal">
+            🎯 <strong>الهدف:</strong> لقطة ختامية فاخرة تجمع كل عناصر الإعلان
+            في صورة واحدة موحدة.
+          </div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                المنتج وسط أدوات الطفل اليومية — حليب، دبدوب، لُعَب ملونة، جزمة
+                صغيرة. مشهد واقعي حميم يشعر الأم بالانتماء.
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>جزء من يومك مع طفلك</li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-feel">🏆 احترافي</span>
+              <span class="chip chip-feel">✅ آمن</span>
+              <span class="chip chip-feel">💫 موثوق</span>
+              <span class="chip chip-cam">🎥 تقريب بطيء جداً للعبوة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SCENE 9 ═══ -->
+      <div class="scene-card">
+        <div class="scene-img-col">
+          <div class="scene-number-badge">9</div>
+          <img
+            src="images/taken images/10.png"
+            alt="Scene 10 – Final Hero Shot"
+          />
+        </div>
+        <div class="scene-info-col">
+          <div class="scene-title">المشهد التاسع – اللقطة النهائية</div>
+          <!-- <div class="scene-goal">
+            🎯 <strong>الهدف:</strong> لقطة ختامية فاخرة تجمع كل عناصر الإعلان
+            في صورة واحدة موحدة.
+          </div> -->
+
+          <div class="info-section">
+            <div class="info-section-label">Visual Description</div>
+            <ul class="detail-list">
+              <li>
+                الأنبوب يتفكك طبقة طبقة وكل طبقة تحمل اسم مكون. ثم يرجع يتجمع
+                ويثبت في المنتصف. يظهر اسم العلامة التجارية والـ CTA.
+              </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Text</div>
+            <ul class="detail-list">
+              <li>Baby-Charisma — جرّبيه النهارده! </li>
+            </ul>
+          </div>
+
+          <hr class="divider" />
+
+          <div class="info-section">
+            <div class="info-section-label">Feel / Camera / Transition</div>
+            <div class="chips-row">
+              <span class="chip chip-trans">⚡ لقطة نهائية ثابتة – FREEZE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /scenes-wrap -->
+
+    <footer style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+      <div style="display: flex; justify-content: center; align-items: center; gap: 30px">
+        <p>Baby-Charisma Cream · Storyboard · 9:16</p>
+        <div class="legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background: var(--pink-mid)"></div>
+            Feeling
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: var(--gold)"></div>
+            Camera
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #9bb0e8"></div>
+            Transition
+          </div>
+        </div>
+      </div>
+      <div style="margin-top: 50px; display: flex; justify-content: center; gap: 20px; text-align: center">
+        <a target="_blank" href="https://www.facebook.com/share/1DkoABygJa/"><i class="fa-brands fa-square-facebook" style="font-size: 26px; color: black;"></i></a>
+        <a target="_blank" href="https://www.instagram.com/pixelbox25?igsh=NW1zdWFmMnNveTJx"><i class="fa-brands fa-instagram" style="font-size: 26px; color: black;"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/company/pixelbox_design/"><i class="fa-brands fa-linkedin" style="font-size: 26px; color: black;"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      function copyPrompt(btn) {
+        const text = btn.previousElementSibling.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.textContent;
+          btn.textContent = "✓ Copied!";
+          setTimeout(() => (btn.textContent = orig), 2000);
+        });
+      }
+    </script>
+  </body>
+</html>
