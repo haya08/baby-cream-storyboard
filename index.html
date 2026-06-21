@@ -46,7 +46,7 @@
 
       /* ── HEADER ────────────────────────────────────────────── */
       header {
-        background: linear-gradient(135deg, var(--pink-deep) 0%, #a0336a 100%);
+        /* background: linear-gradient(135deg, var(--pink-deep) 0%, #a0336a 100%); */
         padding: 36px 48px 32px;
         display: flex;
         align-items: center;
@@ -461,19 +461,21 @@
     </style>
   </head>
   <body>
-    <header>
-      <div>
+    <div style="background: linear-gradient(135deg, var(--pink-deep) 0%, #a0336a 100%);">
+      <div style="display: flex; align-items: center; justify-content: center;">
         <img style="width: 100px;" src="./images/taken images/logo.png" alt="">
       </div>
-      <div class="header-brand">
-        <span class="label">Video Ad Storyboard</span>
-        <h1>Baby-Charisma Cream</h1>
-      </div>
-      <div class="header-meta">
-        <span class="badge">📐 9:16 Reels</span>
-        <span class="badge badge-gold">✦ 9 Scenes</span>
-      </div>
-    </header>
+      <header>
+        <div class="header-brand">
+          <span class="label">Video Ad Storyboard</span>
+          <h1>Baby-Charisma Cream</h1>
+        </div>
+        <div class="header-meta">
+          <span class="badge">📐 9:16 Reels</span>
+          <span class="badge badge-gold">✦ 9 Scenes</span>
+        </div>
+      </header>
+    </div>
 
     <!-- timeline track -->
     <div class="track-wrap">
